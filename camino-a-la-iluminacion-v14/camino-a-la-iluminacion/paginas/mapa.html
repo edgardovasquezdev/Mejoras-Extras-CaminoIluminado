@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Camino a la Iluminación — Iglesias cercanas</title>
+<link rel="stylesheet" href="../css/estilos.css">
+<link rel="stylesheet" href="../vendor/leaflet/leaflet.css">
+<link rel="stylesheet" href="../css/ios.css">
+</head>
+<body>
+
+<header class="sitio-header">
+  <nav class="barra-nav">
+    <a href="../index.html" class="marca">
+      <span class="marca-arco"></span>
+      <span class="marca-texto">Camino a la Iluminación<small>Software para parroquias</small></span>
+    </a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="horarios.html">Horarios</a></li>
+      <li><a href="notificaciones.html">Avisos</a></li>
+      <li><a href="mapa.html" class="activo">Iglesias cercanas</a></li>
+      <li><a href="reservas.html">Reservar sacramento</a></li>
+      <li><a href="documentos.html">Mis documentos</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="seccion" style="padding-top:56px">
+    <div class="envolvente">
+      <div class="encabezado-seccion">
+        <p class="eyebrow">Localización</p>
+        <h1>Iglesias cercanas</h1>
+        <p style="color:var(--color-ink-soft)">Mapa real de Chiclayo con la ubicación de cada parroquia. Toca un marcador o una tarjeta para ver el detalle.</p>
+      </div>
+
+      <div id="permiso-ubicacion" class="aviso-permiso">
+        <p>Actívala para ver tu ubicación real y la distancia exacta a cada iglesia.</p>
+        <button type="button" class="boton boton-secundario" id="btn-permiso-ubicacion">Usar mi ubicación</button>
+      </div>
+
+      <div id="mapa-iglesias" class="mapa-real al-aparecer"></div>
+
+      <div class="buscador" style="margin-top:28px;">
+        <input type="text" id="buscador-iglesias" placeholder="Buscar por nombre, distrito o sacramento…">
+      </div>
+
+      <div class="rejilla">
+        <a href="iglesia.html?id=san-jose" class="tarjeta tarjeta-iglesia">
+          <div class="tarjeta-foto"><img src="https://images.pexels.com/photos/3025593/pexels-photo-3025593.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Parroquia San José"></div>
+          <span class="tarjeta-icono">SJ</span>
+          <h3>Parroquia San José</h3>
+          <p><span class="distancia-real">A 1.2 km</span> — Bautizos, matrimonios, Primera Comunión</p>
+        </a>
+        <a href="iglesia.html?id=santa-fe" class="tarjeta tarjeta-iglesia">
+          <div class="tarjeta-foto"><img src="https://images.pexels.com/photos/5139675/pexels-photo-5139675.jpeg?cs=tinysrgb&w=600" alt="Parroquia Santa Fe"></div>
+          <span class="tarjeta-icono">SF</span>
+          <h3>Parroquia Santa Fe</h3>
+          <p><span class="distancia-real">A 2.8 km</span> — Bautizos, confirmación</p>
+        </a>
+        <a href="iglesia.html?id=carmen" class="tarjeta tarjeta-iglesia">
+          <div class="tarjeta-foto"><img src="https://images.pexels.com/photos/18750283/pexels-photo-18750283/free-photo-of-photo-of-a-small-church-and-palm-trees.jpeg?cs=tinysrgb&w=600" alt="Parroquia Nuestra Señora del Carmen"></div>
+          <span class="tarjeta-icono">NS</span>
+          <h3>Parroquia Nuestra Señora del Carmen</h3>
+          <p><span class="distancia-real">A 3.5 km</span> — Matrimonios, Primera Comunión, confirmación</p>
+        </a>
+        <a href="iglesia.html?id=sagrado-corazon" class="tarjeta tarjeta-iglesia">
+          <div class="tarjeta-foto"><img src="https://images.pexels.com/photos/19623130/pexels-photo-19623130/free-photo-of-exterior-of-a-church.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Capilla Sagrado Corazón"></div>
+          <span class="tarjeta-icono">SC</span>
+          <h3>Capilla Sagrado Corazón</h3>
+          <p><span class="distancia-real">A 4.1 km</span> — Bautizos comunitarios</p>
+        </a>
+      </div>
+
+      <div class="sin-resultados" id="sin-resultados">
+        No encontramos iglesias con ese nombre, distrito o sacramento. Prueba con otra palabra.
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="sitio-footer">
+  <div class="envolvente">
+    Camino a la Iluminación — Proyecto final. Curso Integrador I.
+  </div>
+</footer>
+
+<script src="../vendor/leaflet/leaflet.js"></script>
+<script src="../js/iglesias-data.js"></script>
+<script src="../js/nucleo.js"></script>
+<script src="../js/api.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

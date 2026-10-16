@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Camino a la Iluminación — Crear cuenta</title>
+<link rel="stylesheet" href="../css/estilos.css">
+<link rel="stylesheet" href="../css/ios.css">
+</head>
+<body data-pagina-auth="true">
+
+<header class="sitio-header">
+  <nav class="barra-nav">
+    <a href="../index.html" class="marca">
+      <span class="marca-arco"></span>
+      <span class="marca-texto">Camino a la Iluminación<small>Software para parroquias</small></span>
+    </a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="horarios.html">Horarios</a></li>
+      <li><a href="notificaciones.html">Avisos</a></li>
+      <li><a href="mapa.html">Iglesias cercanas</a></li>
+      <li><a href="reservas.html">Reservar sacramento</a></li>
+      <li><a href="documentos.html">Mis documentos</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="pantalla-auth">
+    <div class="tarjeta-auth al-aparecer">
+      <p class="eyebrow">Nuevo fiel</p>
+      <h1>Crea tu cuenta</h1>
+      <p class="subtexto">Regístrate para reservar sacramentos y ver iglesias cercanas a tu ubicación real.</p>
+
+      <div class="alerta-auth" id="alerta-registro"></div>
+
+      <form id="form-acceso" data-modo="registro" novalidate>
+        <div class="hp" aria-hidden="true"><label for="hp">No llenar este campo</label><input id="hp" name="hp" tabindex="-1" autocomplete="off"></div>
+        <div id="alerta" class="alerta-auth" role="alert"></div>
+        <div class="campo"><label for="nombre">Nombre y apellido</label><input id="nombre" autocomplete="name" maxlength="80"></div>
+        <div class="campo"><label for="dni">DNI (obligatorio)</label><input id="dni" inputmode="numeric" maxlength="8" placeholder="8 dígitos"></div>
+        <div class="campo"><label for="correo">Correo electrónico (opcional)</label><input id="correo" type="email" autocomplete="email" maxlength="120"></div>
+        <div class="campo"><label for="telefono">Celular</label><input id="telefono" inputmode="numeric" maxlength="9" placeholder="9XXXXXXXX"></div>
+        <div class="campo"><label for="clave">Contraseña</label><input id="clave" type="password" autocomplete="new-password" placeholder="Mín. 8, con mayúscula y número"></div>
+        <div class="campo"><label for="clave2">Repite la contraseña</label><input id="clave2" type="password" autocomplete="new-password"></div>
+        <button class="boton boton-primario" id="enviar" style="width:100%">Crear cuenta</button>
+        <p style="margin-top:16px;text-align:center">¿Ya tienes cuenta? <a href="login.html"><strong>Inicia sesión</strong></a></p>
+      </form>
+
+      <p class="pie-auth">¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a></p>
+    </div>
+  </div>
+</main>
+
+<footer class="sitio-footer">
+  <div class="envolvente">
+    Camino a la Iluminación — Proyecto final. Curso Integrador I.
+  </div>
+</footer>
+
+<script src="../js/nucleo.js"></script>
+<script src="../js/api.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/acceso.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+:root { --azul: #4E151D; --oro: #A9812E; --crema: #F2E9D6; --yape: #6B1FA8; }
+.app-nav { background: var(--azul); }
+.app-nav .navbar-brand, .app-nav .nav-link { color: #fff; }
+.app-nav .nav-link:hover { color: var(--oro); }
+.app-nav .navbar-toggler { border-color: rgba(255,255,255,.4); filter: invert(1); }
+.cai-card { border: 1px solid #E7DFD0; border-radius: 14px; box-shadow: 0 6px 20px rgba(20,33,61,.06); }
+.btn-gold { background: #6E1F2A; color: #fff; border: 0; padding: .6rem 1.4rem; border-radius: 10px; }
+.btn-gold:hover, .btn-gold:focus-visible { background: #4E151D; color: #fff; }
+.bg-gold { background: var(--oro) !important; }
+.opcion { display: block; border: 2px solid #E7DFD0; border-radius: 12px; padding: 14px; cursor: pointer; background: #fff; transition: .15s; }
+.btn-check:checked + .opcion { border-color: var(--oro); background: #FFF8EA; }
+.btn-check:focus-visible + .opcion, .form-control:focus, .form-select:focus { outline: 3px solid rgba(184,137,59,.5); outline-offset: 2px; }
+.yape-card { background: var(--yape); color: #fff; border-radius: 14px; }
+.qr { max-width: 220px; border: 1px solid #E7DFD0; border-radius: 12px; padding: 8px; background: #fff; }
+@media (max-width: 575.98px) { main.container { padding-left: 14px; padding-right: 14px; } .btn-gold { width: auto; } }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+/* ===== Inicio, formularios de acceso y validación ===== */
+.hero { background: linear-gradient(135deg, var(--azul) 0%, #26365F 100%); color: #fff; padding: 72px 0; }
+.hero .lead { color: rgba(255,255,255,.8); max-width: 640px; }
+.paso-num { width: 40px; height: 40px; border-radius: 50%; background: var(--oro); color: #fff; display: inline-grid; place-items: center; font-weight: 700; }
+.text-gold { color: var(--oro); }
+.pie { background: var(--azul); color: rgba(255,255,255,.75); padding: 28px 0; font-size: .9rem; }
+.pie a { color: #fff; }
+.campo .error-campo { display: none; color: #9B1C2E; font-size: .8rem; margin-top: 4px; }
+.campo.con-error .error-campo { display: block; }
+.campo.con-error input { border-color: #9B1C2E; background: #FFF5F5; }
+@media (max-width: 575.98px) { .hero { padding: 48px 0; } }

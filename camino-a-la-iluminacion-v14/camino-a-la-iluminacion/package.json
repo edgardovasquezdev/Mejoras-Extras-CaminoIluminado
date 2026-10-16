@@ -1,0 +1,16 @@
+{
+  "name": "camino-a-la-iluminacion",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Dependencias del frontend (autoalojadas en /vendor). Auditar con: npm run audit",
+  "scripts": {
+    "vendor": "node scripts/vendor.js",
+    "audit": "npm audit --audit-level=high"
+  },
+  "dependencies": {
+    "@fontsource/fraunces": "^5.0.0",
+    "@fontsource/inter": "^5.0.0",
+    "bootstrap": "5.3.3",
+    "leaflet": "1.9.4"
+  }
+}

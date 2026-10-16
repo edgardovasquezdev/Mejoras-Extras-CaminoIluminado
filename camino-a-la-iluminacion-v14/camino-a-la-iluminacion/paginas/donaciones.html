@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Camino a la Iluminación — Ofrendas y diezmos</title>
+<link href="../vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../css/estilos.css">
+<link rel="stylesheet" href="../css/app.css">
+<link rel="stylesheet" href="../css/ios.css">
+</head>
+<body data-page="donaciones">
+
+<header class="sitio-header">
+  <nav class="barra-nav">
+    <a href="../index.html" class="marca">
+      <span class="marca-arco"></span>
+      <span class="marca-texto">Camino a la Iluminación<small>Software para parroquias</small></span>
+    </a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="horarios.html">Horarios</a></li>
+      <li><a href="notificaciones.html">Avisos</a></li>
+      <li><a href="mapa.html">Iglesias cercanas</a></li>
+      <li><a href="reservas.html">Reservar sacramento</a></li>
+      <li><a href="documentos.html">Mis documentos</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="seccion" style="padding-top:56px">
+    <div class="envolvente" id="app">
+<h1 class="h3">Ofrendas y diezmos</h1>
+<p class="text-secondary">Tu aporte sostiene las obras de la parroquia y será verificado por el personal.</p>
+<div class="card cai-card p-4"><div class="row g-4 align-items-center mb-3">
+  <div class="col-md-5 text-center"><img src="../img/yape-qr.png" alt="Código QR de Yape de la parroquia" class="img-fluid qr"><div class="small text-secondary mt-2">Escanea desde Yape</div></div>
+  <div class="col-md-7"><div class="yape-card p-3"><div class="small text-uppercase opacity-75">Yapea a este número</div>
+    <div class="d-flex align-items-center gap-2"><span class="fs-3 fw-bold">908502563</span><button type="button" class="btn btn-sm btn-light" data-copiar>Copiar</button></div>
+    <div class="small">Titular: Edgardo Jose Vasquez Sanchez</div></div></div>
+</div>
+  <form id="donacion" class="row g-3" novalidate>
+    <div class="col-md-6"><label class="form-label" for="metodo">Método</label><select id="metodo" class="form-select"><option value="yape">Yape</option><option value="plin">Plin</option></select></div>
+    <div class="col-md-6"><label class="form-label" for="concepto">Tipo de aporte</label><select id="concepto" class="form-select" required><option value="donacion">Ofrenda / donación</option><option value="diezmo">Diezmo</option></select></div>
+    <div class="col-md-6"><label class="form-label" for="monto">Monto (S/)</label><input id="monto" type="number" min="1" max="10000" step="0.50" class="form-control" required></div>
+    <div class="col-md-6"><label class="form-label" for="numeroOperacion">Número de operación</label><input id="numeroOperacion" inputmode="numeric" pattern="\d{6,12}" maxlength="12" class="form-control" required></div>
+    <div class="col-md-6"><label class="form-label" for="yapeOrigen">Tu celular Yape</label><input id="yapeOrigen" inputmode="numeric" pattern="9\d{8}" maxlength="9" class="form-control" required></div>
+    <div class="col-12"><label class="form-label" for="voucher">Captura del voucher (JPG o PNG, máx. 5 MB)</label><input id="voucher" type="file" accept=".jpg,.jpeg,.png" data-img="1" class="form-control" required></div>
+    <div class="col-12"><button class="btn btn-gold" id="enviar">Registrar aporte</button></div>
+  </form></div>
+    </div>
+  </section>
+</main>
+
+<footer class="sitio-footer">
+  <div class="envolvente">
+    Camino a la Iluminación — Proyecto final. Curso Integrador I.
+  </div>
+</footer>
+
+<script src="../vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../js/nucleo.js"></script>
+<script src="../js/api.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/app.js"></script>
+</body>
+</html>

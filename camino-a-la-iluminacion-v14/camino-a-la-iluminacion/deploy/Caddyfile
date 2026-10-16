@@ -1,0 +1,9 @@
+# HTTPS automático (Let's Encrypt). Reemplaza el dominio y arranca el servidor con:
+#   CAI_FORCE_HTTPS=1  CAI_TRUST_PROXY=1  (la app solo escucha en localhost:8080)
+tu-dominio.pe {
+	encode gzip
+	reverse_proxy localhost:8080 {
+		header_up X-Forwarded-Proto {scheme}
+		header_up X-Forwarded-For {remote_host}
+	}
+}

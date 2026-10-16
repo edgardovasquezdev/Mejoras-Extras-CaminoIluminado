@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Camino a la Iluminación — Ficha de parroquia</title>
+<link rel="stylesheet" href="../css/estilos.css">
+<link rel="stylesheet" href="../vendor/leaflet/leaflet.css">
+<link rel="stylesheet" href="../css/ios.css">
+</head>
+<body>
+
+<header class="sitio-header">
+  <nav class="barra-nav">
+    <a href="../index.html" class="marca">
+      <span class="marca-arco"></span>
+      <span class="marca-texto">Camino a la Iluminación<small>Software para parroquias</small></span>
+    </a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="horarios.html">Horarios</a></li>
+      <li><a href="notificaciones.html">Avisos</a></li>
+      <li><a href="mapa.html" class="activo">Iglesias cercanas</a></li>
+      <li><a href="reservas.html">Reservar sacramento</a></li>
+      <li><a href="documentos.html">Mis documentos</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="ficha-iglesia">
+  <section class="seccion" style="padding-top:56px">
+    <div class="envolvente">
+      <p class="eyebrow"><a href="mapa.html">← Iglesias cercanas</a></p>
+      <h1 id="nombre-iglesia" class="al-aparecer">Parroquia</h1>
+      <p id="direccion-iglesia" style="color:var(--color-ink-soft);max-width:60ch;"></p>
+
+      <div class="franja-fotos">
+        <figure><img id="foto-iglesia" src="" alt=""></figure>
+        <figure><img id="foto-interior" src="" alt="Interior de la parroquia"></figure>
+        <figure><div id="mapa-chico" class="mapa-real-chico"></div></figure>
+      </div>
+
+      <div class="rejilla" style="margin-top:8px;">
+        <div class="tarjeta">
+          <h3>Horario de misas</h3>
+          <p id="horario-misas"></p>
+        </div>
+        <div class="tarjeta">
+          <h3>Horario de confesiones</h3>
+          <p id="horario-confesiones"></p>
+        </div>
+        <div class="tarjeta">
+          <h3>Sacramentos disponibles</h3>
+          <p id="sacramentos-iglesia"></p>
+        </div>
+        <div class="tarjeta">
+          <h3>Atención de trámites</h3>
+          <p id="tramites-iglesia"></p>
+        </div>
+      </div>
+
+      <a href="reservas.html" class="boton boton-primario" style="margin-top:8px;">Reservar un sacramento aquí</a>
+    </div>
+  </section>
+</main>
+
+<footer class="sitio-footer">
+  <div class="envolvente">
+    Camino a la Iluminación — Proyecto final. Curso Integrador I.
+  </div>
+</footer>
+
+<script src="../vendor/leaflet/leaflet.js"></script>
+<script src="../js/iglesias-data.js"></script>
+<script src="../js/nucleo.js"></script>
+<script src="../js/api.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>
